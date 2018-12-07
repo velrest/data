@@ -327,8 +327,8 @@ export default class Snapshot {
 
     let value = relationship.getData();
 
+    results = [];
     if (value.data) {
-      results = [];
       value.data.forEach(member => {
         let internalModel = store._internalModelForResource(member);
         if (!internalModel.isDeleted()) {
